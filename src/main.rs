@@ -12,8 +12,13 @@ fn main() {
                  .takes_value(true)
                  .index(1)
                  .help("Number of chars to generate"))
-        
+        .arg(Arg::with_name("num_pw")
+                 .required(true)
+                 .takes_value(true)
+                 .index(2)
+                 .help("Number of passwords to generate"))
         .get_matches();
     let pw_length = matches.value_of("pw_length").unwrap();
-    println!("{}", pw_length);
+    let num_pw = matches.value_of("num_pw").unwrap();
+    println!("{} * {}", pw_length,num_pw);
 }
