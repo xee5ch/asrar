@@ -1,0 +1,7 @@
+[package]
+name = "asrar"
+version = "0.1.0"
+authors = ["Al S <xee5ch.gh.al@il5.in>"]
+
+[dependencies]
+clap = "2.32.0" 
